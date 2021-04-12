@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\QuizController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::group(['middleware'=>['auth','isAdmin'],'prefix'=>'admin'],function(){
-    Route::get('deneme',function(){
-       return "Middleware ve Prefix Testi";
-    });
+    Route::resource('quizzes',QuizController::class);
 });
