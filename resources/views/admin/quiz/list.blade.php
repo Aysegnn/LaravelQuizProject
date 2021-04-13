@@ -23,8 +23,8 @@
       <td>{{$quiz->finished_at}}</td>
   
       <td> 
-      <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-edit"  data-toggle="tooltip" title="Düzenle"></i></a>
-      <a href="#" class="btn btn-sm btn-danger"><i class="fas fa-trash"  data-toggle="tooltip" title="Sil"></i></a>
+      <a href="{{route('quizzes.edit',$quiz->id)}}" class="btn btn-sm btn-primary"><i class="fas fa-edit"  data-toggle="tooltip" title="Düzenle"></i></a>
+      <a href="{{route('quizzes.destroy',$quiz->id)}}" class="btn btn-sm btn-danger"><i class="fas fa-trash"  data-toggle="tooltip" title="Sil"></i></a>
       </td>
     </tr>
    @endforeach
