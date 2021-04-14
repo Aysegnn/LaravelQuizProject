@@ -14,4 +14,7 @@ class Quiz extends Model
         'finished_at',
     ];
     
+    public function questions(){
+        return $this->hasMany('App\Models\Question');
+    }
 }
