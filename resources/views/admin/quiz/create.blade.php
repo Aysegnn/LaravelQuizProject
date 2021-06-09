@@ -1,6 +1,6 @@
 <x-app-layout>
    <x-slot name="header">Quiz Oluştur</x-slot>
-
+   
    <div class="card">
       <div class="card-body">
          <form action="{{route('quizzes.store')}}" method="post">
@@ -17,7 +17,7 @@
                 <input  id="isFinished" @if(old('finished_at'))  checked @endif type="checkbox">
                 <label>Bitiş Tarihi Olacak mı?</label>
             </div>
-            <div class="form-group" @if(!old('finished_at')) style="display:none" @endif  id="finishedInput">
+            <div  id="finishedInput" class="form-group" @if(!old('finished_at')) style="display:none" @endif >
                 <label>Bitiş Tarihi</label>
                 <input type="datetime-local" name="finished_at" class="form-control" value="{{old('finished_at')}}">
             </div>
